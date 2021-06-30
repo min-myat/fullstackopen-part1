@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from './components/Button';
 
 import Header from './components/Header';
 import Statistics from './components/Statistics';
@@ -20,15 +21,9 @@ const App = () => {
         <div className="p-8 bg-white rounded shadow max-w-md">
           <h3 className="text-2xl font-semibold">Give Feedback</h3>
           <div className="mt-10">
-            <button onClick={handleGood} className="btn">
-              good
-            </button>
-            <button onClick={handleNeutral} className="btn">
-              neutral
-            </button>
-            <button onClick={handleBad} className="btn mr-0">
-              bad
-            </button>
+            <Button name="good" handleClick={handleGood} />
+            <Button name="neutral" handleClick={handleNeutral} />
+            <Button name="bad" handleClick={handleBad} />
           </div>
         </div>
 
