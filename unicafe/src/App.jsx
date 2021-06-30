@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 
 import Header from './components/Header';
+import Statistics from './components/Statistics';
 
 const App = () => {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
-
-  const total = good + neutral + bad;
-  const average = (good - bad) / total;
-  const positive = (good / total) * 100;
 
   const handleGood = () => setGood(good + 1);
   const handleNeutral = () => setNeutral(neutral + 1);
@@ -36,16 +33,7 @@ const App = () => {
         </div>
 
         <div className="p-8 bg-white rounded shadow max-w-md">
-          <h3 className="text-2xl font-semibold mb-4">Statics</h3>
-          <hr />
-          <div className="my-4">
-            <div>Good {good}</div>
-            <div>Neutral {neutral}</div>
-            <div>Bad {bad}</div>
-            <div>All {total}</div>
-            {total !== 0 && <div>Average {average}</div>}
-            {total !== 0 && <div>Positive {positive}%</div>}
-          </div>
+          <Statistics good={good} neutral={neutral} bad={bad} />
         </div>
       </div>
     </div>
