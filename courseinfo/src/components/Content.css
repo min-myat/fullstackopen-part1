@@ -1,0 +1,14 @@
+.content-container {
+  display: flex;
+  margin: 10px 20px;
+}
+
+.content-title {
+  width: 200px;
+}
+
+.content-count {
+  width: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
