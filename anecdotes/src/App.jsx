@@ -49,9 +49,9 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center">
       <Header />
-      <div className="p-6 bg-white rounded shadow max-w-lg mx-auto my-8">
+      <div className="p-6 mx-4 bg-white rounded shadow max-w-lg my-8">
         <div className="text-cyan-700 text-2xl">{anecdotes[selected]}</div>
         <div className="text-gray-500">has {votes[selected]} votes</div>
         <button className="btn mr-4" onClick={handleVote}>
