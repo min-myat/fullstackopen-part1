@@ -1,4 +1,4 @@
-#Course Information Exercise
+# Course Information Exercise
 
 
 Install the dependencies by running `npm install`
